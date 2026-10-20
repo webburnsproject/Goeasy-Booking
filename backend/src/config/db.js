@@ -15,6 +15,7 @@ const connectDB = async () => {
     }
 
     const conn = await mongoose.connect(uri, {
+      dbName: process.env.DB_NAME || 'goeasy_booking',
       serverSelectionTimeoutMS: 8000,
       connectTimeoutMS: 10000,
       socketTimeoutMS: 45000,
